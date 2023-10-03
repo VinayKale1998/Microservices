@@ -7,7 +7,7 @@ import cors from "cors";
 
 const app = express();
 app.use(cors());
-app.use(bodyParser());
+app.use(bodyParser.json());
 const posts = {};
 
 app.get("/posts", (req, res) => {
@@ -27,5 +27,5 @@ app.post("/posts", (req, res) => {
 
 app.listen(process.env.PORT || 4000, (err) => {
   if (err) console.log(err.message);
-  else console.log(`App is listening to port ${process.env.PORT || 4000}`);
+  else console.log(`App is listening to port ${process.env.PORT || 4001}`);
 });
